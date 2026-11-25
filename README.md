@@ -43,7 +43,7 @@ Aplicação desktop desenvolvida como Projeto Final da disciplina de **Linguagen
 3. **Configure a Conexão (`ConectaBanco.cs`):**
    - Abra a solução `.sln` no **Visual Studio** e ajuste `USER` e `PASSWORD` em `ConectaBanco.cs` de acordo com o seu MySQL local (verifique também se o pacote NuGet **`MySql.Data`** está restaurado).
 4. **Execute o Aplicativo:**
-   - Pressione **`F5`** no Visual Studio e entre com `admin` / `1234`.
+   - Pressione **`F5`** no Visual Studio e entre com `adm` / `1234`.
 
 ---
 
