@@ -8,8 +8,8 @@ namespace FLORICULTURA_Projeto_CSharp
     {
         private const string SERVER = "localhost";
         private const int PORT = 3306;
-        private const string DATABASE = "floricultura";
-        private const string USER = "root";
+        private const string DATABASE = "banco_floricultura";
+        private const string USER = "floricultura";
         private const string PASSWORD = "1234";
 
         private MySqlConnection conexao;

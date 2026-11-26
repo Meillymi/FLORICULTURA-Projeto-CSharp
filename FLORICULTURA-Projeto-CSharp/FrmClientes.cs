@@ -95,7 +95,6 @@ namespace FLORICULTURA_Projeto_CSharp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            // TODO: no MySQL use: SELECT ... WHERE nome LIKE '%texto%'
             dgvClientes.CurrentCell = null;
             string texto = txtBuscar.Text.Trim().ToLower();
             foreach (DataGridViewRow r in dgvClientes.Rows)

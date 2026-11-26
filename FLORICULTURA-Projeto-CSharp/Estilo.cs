@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace FLORICULTURA_Projeto_CSharp
 {
-    // Funções de apoio usadas por todos os formulários
+
     public static class Estilo
     {
         public static readonly Color Rosa = ColorTranslator.FromHtml("#B83B61");
@@ -18,14 +18,12 @@ namespace FLORICULTURA_Projeto_CSharp
         [DllImport("user32.dll")] private static extern bool ReleaseCapture();
         [DllImport("user32.dll")] private static extern int SendMessage(IntPtr h, int msg, int w, int l);
 
-        // Arrastar um formulário sem borda
         public static void Arrastar(Form f)
         {
             ReleaseCapture();
             SendMessage(f.Handle, 0x112, 0xF012, 0);
         }
 
-        // Cantos arredondados em qualquer controle
         public static void Arredondar(Control c, int raio)
         {
             int r = Math.Min(raio, Math.Min(c.Width, c.Height) / 2);
@@ -39,7 +37,6 @@ namespace FLORICULTURA_Projeto_CSharp
             c.Region = new Region(p);
         }
 
-        // Deixa o DataGridView com a cara da floricultura
         public static void EstilizarGrid(DataGridView g)
         {
             g.BackgroundColor = Color.White;
@@ -67,7 +64,6 @@ namespace FLORICULTURA_Projeto_CSharp
             g.GridColor = RosaFundo;
         }
 
-        // Lê a imagem do disco sem travar o arquivo (devolve null se não existir)
         public static Image CarregarImagem(string caminho)
         {
             if (string.IsNullOrEmpty(caminho) || !File.Exists(caminho)) return null;
@@ -77,7 +73,6 @@ namespace FLORICULTURA_Projeto_CSharp
             }
         }
 
-        // Copia a imagem escolhida para a pasta "Imagens" ao lado do programa e devolve o novo caminho
         public static string CopiarImagem(string origem)
         {
             string pasta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Imagens");
@@ -89,7 +84,6 @@ namespace FLORICULTURA_Projeto_CSharp
         }
     }
 
-    // Troca de tela: abre a nova, fecha a anterior (o login só é escondido)
     public static class Navegacao
     {
         private static bool trocando = false;
